@@ -1,5 +1,6 @@
 FROM golang:1.24-alpine as builder
 WORKDIR /app
+COPY .env ./
 COPY go.mod .
 COPY go.sum .
 COPY *.go ./
