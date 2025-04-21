@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  weather-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - WEATHER_API_KEY=cfbabc7298d04b5896f154926252104
+    restart: unless-stopped
