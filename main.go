@@ -133,7 +133,7 @@ func getTemperatureByLocation(city string) (*WeatherAPIResponse, error) {
 		apiKey = "sua_chave_api"
 	}
 	paramEncoded := url.QueryEscape(city)
-	url := fmt.Sprintf("http://api.weatherapi.com/v1/current.json?key=%s&q=%s&aqi=no", apiKey, paramEncoded)
+	url := fmt.Sprintf("http://api.weatherapi.com/v1/current.json?key=%s&q=%s&aqi=no", "cfbabc7298d04b5896f154926252104", paramEncoded)
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
